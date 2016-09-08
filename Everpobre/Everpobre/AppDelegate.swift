@@ -7,28 +7,68 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let model = CoreDataStack(modelName: "Model")
+    let model = CoreDataStack(modelName: "Model")!
     
     func playWithData(){
     
         // Notebook
-        var nb = Notebook(name: "trollface", inContext: (model?.context)!)
+        var nb = Notebook(name: "Watchlist", inContext: model.context)
+        var wwdc = Notebook(name: "Sesiones WWDC", inContext: model.context)
         
         // Notes
+        let img = UIImage(imageLiteralResourceName: "Trollface.jpg")
         
+        let trollface = Note(notebook: nb, image: img, inContext: model.context)
         
+        trollface.text = "Troll Face"
+        
+        let expanse = Note(notebook: nb, inContext: model.context)
+        expanse.text = "Serie ne SyFy"
+        
+        let r1 = Note(notebook: nb, inContext: model.context)
+        r1.text = "Rogue 1: A Starways Story"
+        
+        // SEarch
+        //let notebooks = Notebook.fetchRequest()
     
+        let req = NSFetchRequest<Notebook>(entityName: Notebook.entityName)
+        
+        req.fetchBatchSize = 50
+        
+        let notebooks = try! model.context.execute(req)
+        
+        print(type(of: notebooks))
+        print(notebooks)
+        
+        // Filter
+        let req2 = NSFetchRequest<Note>(entityName: Note.entityName)
+        
+            // Order
+        req2.sortDescriptors = [NSSortDescriptor(key: "creationDate",
+                                ascending: false)]
+        
+        req2.predicate = NSPredicate(format: "notebook == %@", nb)
+        let movies = try! model.context.execute(req2)
+        
+        // Delete objects
+        model.context.delete(trollface)
+        
+        // Save
+        model.save()
     }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        playWithData()
         return true
     }
 

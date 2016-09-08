@@ -12,12 +12,13 @@ import CoreData
 
 @objc(Notebook)
 public class Notebook: NSManagedObject {
+    
+    static let entityName = "Notebook"
+    
     init(name: String, inContext context: NSManagedObjectContext) {
         
-        /*static*/ let entityName = "Notebook"
-        
         // We need Notebook entity
-        let entity = NSEntityDescription.entity(forEntityName: entityName,
+        let entity = NSEntityDescription.entity(forEntityName: Notebook.entityName,
                                                 in: context)!
         
         // Super call
