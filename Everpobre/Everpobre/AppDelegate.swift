@@ -12,6 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let model = CoreDataStack(modelName: "Model")
+    
+    func playWithData(){
+    
+        // Notebook
+        var nb = Notebook(name: "trollface", inContext: (model?.context)!)
+        
+        // Notes
+        
+        
+    
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

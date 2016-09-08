@@ -12,5 +12,19 @@ import CoreData
 
 @objc(Notebook)
 public class Notebook: NSManagedObject {
-
+    init(name: String, inContext context: NSManagedObjectContext) {
+        
+        /*static*/ let entityName = "Notebook"
+        
+        // We need Notebook entity
+        let entity = NSEntityDescription.entity(forEntityName: entityName,
+                                                in: context)!
+        
+        // Super call
+        super.init(entity: entity, insertInto: context)
+    
+        // Assign date values
+        creationDate = NSDate()
+        modificationDate = NSDate()
+    }
 }

@@ -21,6 +21,8 @@
 		1C3289C61D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289C01D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift */; };
 		1C3289C71D81E6D100CD17F2 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289C11D81E6D100CD17F2 /* Note+CoreDataClass.swift */; };
 		1C3289C81D81E6D100CD17F2 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289C21D81E6D100CD17F2 /* Note+CoreDataProperties.swift */; };
+		1C3289CB1D81ED2C00CD17F2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289CA1D81ED2C00CD17F2 /* CoreDataStack.swift */; };
+		1C3289CD1D81F3A000CD17F2 /* TrollFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3289CC1D81F3A000CD17F2 /* TrollFace.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		1C3289C01D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataProperties.swift"; path = "../Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1C3289C11D81E6D100CD17F2 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "../Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C3289C21D81E6D100CD17F2 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1C3289CA1D81ED2C00CD17F2 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1C3289CC1D81F3A000CD17F2 /* TrollFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrollFace.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		1C29085C1D7F6E590039260D /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				1C3289CE1D81F3A500CD17F2 /* Resources */,
 				1C29085D1D7F6E590039260D /* AppDelegate.swift */,
 				1C29085F1D7F6E590039260D /* ViewController.swift */,
 				1C2908611D7F6E590039260D /* Main.storyboard */,
@@ -143,6 +148,7 @@
 		1C29088E1D7F6EBB0039260D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C3289CA1D81ED2C00CD17F2 /* CoreDataStack.swift */,
 				1C3289C91D81E9F600CD17F2 /* Managed */,
 				1C29088B1D7F6EA20039260D /* Model.xcdatamodeld */,
 			);
@@ -160,6 +166,14 @@
 				1C3289C21D81E6D100CD17F2 /* Note+CoreDataProperties.swift */,
 			);
 			name = Managed;
+			sourceTree = "<group>";
+		};
+		1C3289CE1D81F3A500CD17F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C3289CC1D81F3A000CD17F2 /* TrollFace.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C3289CD1D81F3A000CD17F2 /* TrollFace.png in Resources */,
 				1C2908681D7F6E590039260D /* LaunchScreen.storyboard in Resources */,
 				1C2908651D7F6E590039260D /* Assets.xcassets in Resources */,
 				1C2908631D7F6E590039260D /* Main.storyboard in Resources */,
@@ -301,6 +316,7 @@
 				1C3289C51D81E6D100CD17F2 /* Notebook+CoreDataClass.swift in Sources */,
 				1C3289C31D81E6D100CD17F2 /* Photo+CoreDataClass.swift in Sources */,
 				1C3289C61D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift in Sources */,
+				1C3289CB1D81ED2C00CD17F2 /* CoreDataStack.swift in Sources */,
 				1C3289C71D81E6D100CD17F2 /* Note+CoreDataClass.swift in Sources */,
 				1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */,
 				1C29088D1D7F6EA20039260D /* Model.xcdatamodeld in Sources */,
