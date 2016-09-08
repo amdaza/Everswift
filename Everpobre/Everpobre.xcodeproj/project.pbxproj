@@ -15,6 +15,12 @@
 		1C2908731D7F6E590039260D /* EverpobreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2908721D7F6E590039260D /* EverpobreTests.swift */; };
 		1C29087E1D7F6E590039260D /* EverpobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29087D1D7F6E590039260D /* EverpobreUITests.swift */; };
 		1C29088D1D7F6EA20039260D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C29088B1D7F6EA20039260D /* Model.xcdatamodeld */; };
+		1C3289C31D81E6D100CD17F2 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */; };
+		1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */; };
+		1C3289C51D81E6D100CD17F2 /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */; };
+		1C3289C61D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289C01D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift */; };
+		1C3289C71D81E6D100CD17F2 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289C11D81E6D100CD17F2 /* Note+CoreDataClass.swift */; };
+		1C3289C81D81E6D100CD17F2 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289C21D81E6D100CD17F2 /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		1C29087D1D7F6E590039260D /* EverpobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverpobreUITests.swift; sourceTree = "<group>"; };
 		1C29087F1D7F6E590039260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C29088C1D7F6EA20039260D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "../Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "../Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1C3289C01D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataProperties.swift"; path = "../Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1C3289C11D81E6D100CD17F2 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "../Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1C3289C21D81E6D100CD17F2 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +143,23 @@
 		1C29088E1D7F6EBB0039260D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C3289C91D81E9F600CD17F2 /* Managed */,
 				1C29088B1D7F6EA20039260D /* Model.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1C3289C91D81E9F600CD17F2 /* Managed */ = {
+			isa = PBXGroup;
+			children = (
+				1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */,
+				1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */,
+				1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */,
+				1C3289C01D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift */,
+				1C3289C11D81E6D100CD17F2 /* Note+CoreDataClass.swift */,
+				1C3289C21D81E6D100CD17F2 /* Note+CoreDataProperties.swift */,
+			);
+			name = Managed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +298,13 @@
 			files = (
 				1C2908601D7F6E590039260D /* ViewController.swift in Sources */,
 				1C29085E1D7F6E590039260D /* AppDelegate.swift in Sources */,
+				1C3289C51D81E6D100CD17F2 /* Notebook+CoreDataClass.swift in Sources */,
+				1C3289C31D81E6D100CD17F2 /* Photo+CoreDataClass.swift in Sources */,
+				1C3289C61D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift in Sources */,
+				1C3289C71D81E6D100CD17F2 /* Note+CoreDataClass.swift in Sources */,
+				1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */,
 				1C29088D1D7F6EA20039260D /* Model.xcdatamodeld in Sources */,
+				1C3289C81D81E6D100CD17F2 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +549,7 @@
 				1C2908841D7F6E590039260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2908851D7F6E590039260D /* Build configuration list for PBXNativeTarget "EverpobreTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +558,7 @@
 				1C2908871D7F6E590039260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2908881D7F6E590039260D /* Build configuration list for PBXNativeTarget "EverpobreUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +567,7 @@
 				1C29088A1D7F6E590039260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
