@@ -50,6 +50,7 @@ public class Note: NSManagedObject {
         creationDate = NSDate()
         modificationDate = NSDate()
         
+        // Save empty photo
         photo = Photo(note: self, inContext: context)
     }
 }
