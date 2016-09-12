@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 import UIKit
 
-@objc(Note)
+@objc
 public class Note: NSManagedObject {
     
     static let entityName = "Note"

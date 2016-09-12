@@ -30,6 +30,8 @@ class CoreDataTableViewController: UITableViewController {
             
     }
     
+    
+    
     // Do not worry about this initializer. I has to be implemented
     // because of the way Swift interfaces with an Objective C
     // protocol called NSArchiving. It's not relevant.
@@ -38,7 +40,21 @@ class CoreDataTableViewController: UITableViewController {
     }
     
     
+    
+    //MARK: - View lifecycle
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
+        // TEMP FIX
+        
+        // Whenever the frc changes, we execute the search and
+        // reload the table
+        fetchedResultsController?.delegate = self
+        executeSearch()
+        tableView.reloadData()
+    }
 }
+
 
 
 
@@ -56,7 +72,10 @@ extension CoreDataTableViewController{
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         if let fc = fetchedResultsController{
-            return (fc.sections?.count)!;
+            guard let sections = fc.sections else {
+                return 1
+            }
+            return sections.count
         }else{
             return 0
         }
@@ -72,7 +91,8 @@ extension CoreDataTableViewController{
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let fc = fetchedResultsController{
-            return fc.sections![section].name;
+            
+            return fc.sections?[section].name;
         }else{
             return nil
         }

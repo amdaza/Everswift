@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 import UIKit
 
-@objc(Photo)
+@objc
 public class Photo: NSManagedObject {
     
     static let entityName = "Photo"

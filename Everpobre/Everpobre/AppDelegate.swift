@@ -16,11 +16,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let model = CoreDataStack(modelName: "Model")!
     
+    func loadDummyData() {
+        // Reset
+        do {
+            try model.dropAllData()
+        } catch {
+            print("Error trying to delete")
+        }
+        
+        // A couple of notes
+        let pelis = Notebook(name: "Pelis de los 80",
+                             inContext: model.context)
+        let wwdc = Notebook(name: "Sesiones WWDC",
+                            inContext: model.context)
+        
+        // Notes
+        let axel = Note(notebook: pelis,
+                        inContext: model.context)
+        axel.text = "Beverly Hill's Cop"
+        
+        let strike = Note(notebook: pelis,
+                        inContext: model.context)
+        strike.text = "The Empire Strikes Back"
+        
+        let async = Note(notebook: wwdc,
+                         inContext: model.context)
+        async.text = "Asynchronous Design Patterns"
+        
+        // Save
+        model.save()
+    }
+    
     func playWithData(){
     
         // Notebook
-        var nb = Notebook(name: "Watchlist", inContext: model.context)
-        var wwdc = Notebook(name: "Sesiones WWDC", inContext: model.context)
+        let nb = Notebook(name: "Watchlist", inContext: model.context)
+        let wwdc = Notebook(name: "Sesiones WWDC", inContext: model.context)
         
         // Notes
         let img = UIImage(imageLiteralResourceName: "Trollface.jpg")
@@ -60,6 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Delete objects
         model.context.delete(trollface)
         
+        print(movies)
+        
         // Save
         model.save()
     }
@@ -68,7 +101,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        playWithData()
+        //playWithData()
+        
+        // Create data stuff
+        loadDummyData()
+        
+        // Create fetchRequest
+        let fr = NSFetchRequest<Notebook>(entityName: Notebook.entityName)
+        fr.fetchBatchSize = 50 // de 50 en 50
+        
+        fr.sortDescriptors = [NSSortDescriptor(key: "name",
+                                               ascending: false),
+                              NSSortDescriptor(key: "modificationDate",
+                                               ascending: true)]
+        
+        // Create fetchedResultsCtrl
+        let fc = NSFetchedResultsController(fetchRequest: fr,
+                                            managedObjectContext: model.context,
+                                            sectionNameKeyPath: nil,
+                                            cacheName: nil)
+        
+        // Create rootVC
+        let nVC = NotebooksViewController(fetchedResultsController: fc as! NSFetchedResultsController<NSFetchRequestResult>,
+                                          style: .plain)
+        
+        let navVC = UINavigationController(rootViewController: nVC)
+        
+        // Create window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Put rootVC into window and show it
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

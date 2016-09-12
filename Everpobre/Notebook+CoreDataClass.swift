@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Notebook)
+@objc
 public class Notebook: NSManagedObject {
     
     static let entityName = "Notebook"
@@ -27,12 +27,13 @@ public class Notebook: NSManagedObject {
         // Assign date values
         creationDate = NSDate()
         modificationDate = NSDate()
+        self.name = name
     }
 }
 
 //MARK: - KVO
 extension Notebook {
-    static let observableKeys = ["name", "notes"]
+    @nonobjc static let observableKeys = ["name", "notes"]
     
     func setupKVO(){
         // Subscribe notifications to some properties
@@ -82,5 +83,6 @@ extension Notebook {
     
     
 }
+
 
 
