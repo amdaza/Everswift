@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2464231D87342800D5B3C6 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2464221D87342800D5B3C6 /* CoreDataTableViewController.swift */; };
+		1C2464251D87371C00D5B3C6 /* NotebooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2464241D87371C00D5B3C6 /* NotebooksViewController.swift */; };
 		1C29085E1D7F6E590039260D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29085D1D7F6E590039260D /* AppDelegate.swift */; };
 		1C2908601D7F6E590039260D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29085F1D7F6E590039260D /* ViewController.swift */; };
 		1C2908631D7F6E590039260D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2908611D7F6E590039260D /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C2464221D87342800D5B3C6 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		1C2464241D87371C00D5B3C6 /* NotebooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebooksViewController.swift; sourceTree = "<group>"; };
 		1C29085A1D7F6E590039260D /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C29085D1D7F6E590039260D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C29085F1D7F6E590039260D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C2464211D87340100D5B3C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C2464221D87342800D5B3C6 /* CoreDataTableViewController.swift */,
+				1C2464241D87371C00D5B3C6 /* NotebooksViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1C2908511D7F6E590039260D = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		1C29085C1D7F6E590039260D /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				1C2464211D87340100D5B3C6 /* Controllers */,
 				1C3289CE1D81F3A500CD17F2 /* Resources */,
 				1C29085D1D7F6E590039260D /* AppDelegate.swift */,
 				1C29085F1D7F6E590039260D /* ViewController.swift */,
@@ -325,6 +339,8 @@
 				1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */,
 				1C29088D1D7F6EA20039260D /* Model.xcdatamodeld in Sources */,
 				1C3289C81D81E6D100CD17F2 /* Note+CoreDataProperties.swift in Sources */,
+				1C2464231D87342800D5B3C6 /* CoreDataTableViewController.swift in Sources */,
+				1C2464251D87371C00D5B3C6 /* NotebooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

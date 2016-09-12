@@ -54,3 +54,60 @@ public class Note: NSManagedObject {
         photo = Photo(note: self, inContext: context)
     }
 }
+
+
+
+//MARK: - KVO
+extension Note {
+    @nonobjc static let observableKeys = ["name", "notes"]
+    
+    func setupKVO(){
+        // Subscribe notifications to some properties
+        for key in Notebook.observableKeys {
+            self.addObserver(self, forKeyPath: key, options: [],
+                             context: nil)
+        }
+    }
+    
+    func teardownKVO(){
+        // Unsubscribe
+        for key in Note.observableKeys {
+            self.removeObserver(self, forKeyPath: key)
+        }
+    }
+    
+    public override func observeValue(forKeyPath keyPath: String?,
+                                      of object: Any?,
+                                      change: [NSKeyValueChangeKey : Any]?,
+                                      context: UnsafeMutableRawPointer?) {
+        modificationDate = NSDate()
+    }
+}
+
+
+//MARK: - Lifecycle
+extension Note {
+    
+    // Called only once
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        
+        setupKVO()
+    }
+    
+    // Called many times
+    public override func awakeFromFetch() {
+        super.awakeFromFetch()
+        
+        setupKVO()
+    }
+    
+    public override func willTurnIntoFault() {
+        super.willTurnIntoFault()
+        
+        teardownKVO()
+    }
+    
+    
+}
+
