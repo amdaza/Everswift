@@ -13,7 +13,7 @@ class NotebooksViewController: CoreDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addNewNotebookButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,5 +55,21 @@ extension NotebooksViewController {
         // Return cell
         return cell!
     
+    }
+    
+    // MARK: - Utils
+    
+    func addNewNotebookButton() {
+    
+        let btn = UIBarButtonItem(barButtonSystemItem: .add,
+                                  target: self,
+                                  action: #selector(addNewNotebook))
+        
+        navigationItem.rightBarButtonItem = btn
+    }
+    
+    // MARK: - Actions
+    func addNewNotebook() {
+        print("Holita")
     }
 }
