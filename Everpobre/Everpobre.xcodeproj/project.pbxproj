@@ -17,6 +17,7 @@
 		1C2908731D7F6E590039260D /* EverpobreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2908721D7F6E590039260D /* EverpobreTests.swift */; };
 		1C29087E1D7F6E590039260D /* EverpobreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29087D1D7F6E590039260D /* EverpobreUITests.swift */; };
 		1C29088D1D7F6EA20039260D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C29088B1D7F6EA20039260D /* Model.xcdatamodeld */; };
+		1C29C9CA1D889A11004B2C5F /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29C9C91D889A11004B2C5F /* NotesViewController.swift */; };
 		1C3289C31D81E6D100CD17F2 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */; };
 		1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */; };
 		1C3289C51D81E6D100CD17F2 /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */; };
@@ -62,6 +63,7 @@
 		1C29087D1D7F6E590039260D /* EverpobreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverpobreUITests.swift; sourceTree = "<group>"; };
 		1C29087F1D7F6E590039260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C29088C1D7F6EA20039260D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1C29C9C91D889A11004B2C5F /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "../Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "../Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				1C2464221D87342800D5B3C6 /* CoreDataTableViewController.swift */,
 				1C2464241D87371C00D5B3C6 /* NotebooksViewController.swift */,
+				1C29C9C91D889A11004B2C5F /* NotesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				1C3289C61D81E6D100CD17F2 /* Notebook+CoreDataProperties.swift in Sources */,
 				1C3289CB1D81ED2C00CD17F2 /* CoreDataStack.swift in Sources */,
 				1C3289C71D81E6D100CD17F2 /* Note+CoreDataClass.swift in Sources */,
+				1C29C9CA1D889A11004B2C5F /* NotesViewController.swift in Sources */,
 				1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */,
 				1C29088D1D7F6EA20039260D /* Model.xcdatamodeld in Sources */,
 				1C3289C81D81E6D100CD17F2 /* Note+CoreDataProperties.swift in Sources */,

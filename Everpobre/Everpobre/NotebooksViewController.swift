@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NotebooksViewController: CoreDataTableViewController {
 
@@ -78,4 +79,26 @@ extension NotebooksViewController {
         let _ = Notebook(name: "Nueva Libreta",
                          inContext: fc.managedObjectContext)
     }
+    
+    // MARK: - Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let nb = fetchedResultsController?.object(at: indexPath) as! Notebook
+        
+        let req = NSFetchRequest<Note>(entityName: Note.entityName)
+        req.fetchBatchSize = 50
+        req.predicate = NSPredicate(format: "notebook == %@", nb)
+        req.sortDescriptors = [NSSortDescriptor(key: "modificationDate",
+                                                ascending: false)]
+        
+        let fc = NSFetchedResultsController(fetchRequest: req,
+                                            managedObjectContext: nb.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        let notesVC = NotesViewController(fetchedResultsController: fc as! NSFetchedResultsController<NSFetchRequestResult>)
+        
+        navigationController?.pushViewController(notesVC, animated: true)
+    }
 }
+
+
+
+
