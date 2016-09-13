@@ -39,12 +39,12 @@ public class Note: NSManagedObject {
     }
     
     
-    init(notebook: Notebook,
+    convenience init(notebook: Notebook,
                      inContext context : NSManagedObjectContext) {
         let ent = NSEntityDescription.entity(forEntityName: Note.entityName,
                                              in: context)!
         
-        super.init(entity: ent, insertInto: context)
+        self.init(entity: ent, insertInto: context)
         
         self.notebook = notebook
         creationDate = NSDate()
