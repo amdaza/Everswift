@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         req.fetchBatchSize = 50
         
-        let notebooks = try! model.context.execute(req)
+        let notebooks = try! model.context.fetch(req)
         
         print(type(of: notebooks))
         print(notebooks)
@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 ascending: false)]
         
         req2.predicate = NSPredicate(format: "notebook == %@", nb)
-        let movies = try! model.context.execute(req2)
+        let movies = try! model.context.fetch(req2)
         
         // Delete objects
         model.context.delete(trollface)
