@@ -15,14 +15,14 @@ public class Notebook: NSManagedObject {
     
     static let entityName = "Notebook"
     
-    init(name: String, inContext context: NSManagedObjectContext) {
+    convenience init(name: String, inContext context: NSManagedObjectContext) {
         
         // We need Notebook entity
         let entity = NSEntityDescription.entity(forEntityName: Notebook.entityName,
                                                 in: context)!
         
         // Super call
-        super.init(entity: entity, insertInto: context)
+        self.init(entity: entity, insertInto: context)
     
         // Assign date values
         creationDate = NSDate()

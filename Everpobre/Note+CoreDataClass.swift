@@ -16,7 +16,7 @@ public class Note: NSManagedObject {
     
     static let entityName = "Note"
     
-    init(notebook: Notebook,
+    convenience init(notebook: Notebook,
          image: UIImage,
          inContext context: NSManagedObjectContext){
     
@@ -25,7 +25,7 @@ public class Note: NSManagedObject {
                                             in: context)!
     
         // Call super
-        super.init(entity: ent, insertInto: context)
+        self.init(entity: ent, insertInto: context)
     
         // Assign properties
         self.notebook = notebook

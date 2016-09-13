@@ -26,14 +26,14 @@ public class Photo: NSManagedObject {
         }
     }
     
-    init(note: Note,
+    convenience init(note: Note,
          image: UIImage,
          inContext context: NSManagedObjectContext) {
         
         let ent = NSEntityDescription.entity(forEntityName: Photo.entityName,
                                              in: context)!
         
-        super.init(entity: ent, insertInto: context)
+        self.init(entity: ent, insertInto: context)
         
         // Add note
         addToNotes(note)
@@ -43,10 +43,10 @@ public class Photo: NSManagedObject {
         
     }
     
-    init(note: Note, inContext context: NSManagedObjectContext) {
+    convenience init(note: Note, inContext context: NSManagedObjectContext) {
         let ent = NSEntityDescription.entity(forEntityName: Photo.entityName, in: context)!
         
-        super.init(entity: ent, insertInto: context)
+        self.init(entity: ent, insertInto: context)
         addToNotes(note)
     }
 }
