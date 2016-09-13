@@ -70,6 +70,12 @@ extension NotebooksViewController {
     
     // MARK: - Actions
     func addNewNotebook() {
-        print("Holita")
+        
+        guard let fc = fetchedResultsController else {
+            return
+        }
+        // Create new notebook
+        let _ = Notebook(name: "Nueva Libreta",
+                         inContext: fc.managedObjectContext)
     }
 }
