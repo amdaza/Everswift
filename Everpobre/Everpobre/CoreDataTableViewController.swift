@@ -24,10 +24,14 @@ class CoreDataTableViewController: UITableViewController {
     
     init(fetchedResultsController fc : NSFetchedResultsController<NSFetchRequestResult>,
         style : UITableViewStyle = .plain){
-            fetchedResultsController = fc
+        
+        // Will not execute didSet, afraid of nil
+        //fetchedResultsController = fc
             super.init(style: style)
             
-            
+        defer {
+            fetchedResultsController = fc
+        }
     }
     
     
