@@ -49,6 +49,9 @@ class CoreDataTableViewController: UITableViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        title = "Everpobre"
+        
+        /*
         // TEMP FIX
         
         // Whenever the frc changes, we execute the search and
@@ -56,6 +59,7 @@ class CoreDataTableViewController: UITableViewController {
         fetchedResultsController?.delegate = self
         executeSearch()
         tableView.reloadData()
+ */
     }
 }
 
