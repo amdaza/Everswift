@@ -16,7 +16,24 @@ class PhotoViewController: UIViewController {
     @IBOutlet weak var photoView: UIImageView!
     
     @IBAction func takePhoto(_ sender: AnyObject) {
+        // Create UIPicker instance
+        let picker = UIImagePickerController()
         
+        // Configure it
+        if (UIImagePickerController.isCameraDeviceAvailable(.rear)) {
+            picker.sourceType = .camera
+        } else {
+            // Gallery is enough
+            picker.sourceType = .photoLibrary
+        }
+        
+        picker.delegate = self
+        
+        // Show it modal way
+        self.present(picker, animated: true) {
+            // If you want to do something just when picker is shown
+            
+        }
     }
     
     @IBAction func deletePhoto(_ sender: AnyObject) {
@@ -67,4 +84,26 @@ class PhotoViewController: UIViewController {
  */
 
 
+}
+
+
+// MARK: - Delegates
+
+extension PhotoViewController: UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate {
+
+    
+    // Capture picked event (receives original and edited picker, and other metadata)
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        // Resize image to screen size
+        
+        // Save in model
+        model.photo?.image = info[UIImagePickerControllerOriginalImage] as! UIImage?
+        
+        // Remove picker
+        self.dismiss(animated: true) {
+            // Nothing to do here
+        }
+    }
 }
