@@ -1,27 +1,28 @@
 //
-//  Photo+CoreDataProperties.swift
+//  Location+CoreDataProperties.swift
 //  Everpobre
 //
-//  Created by Home on 8/9/16.
+//  Created by Home on 19/9/16.
 //  Copyright © 2016 Alicia. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-extension Photo {
+extension Location {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Photo> {
-        return NSFetchRequest<Photo>(entityName: "Photo");
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Location> {
+        return NSFetchRequest<Location>(entityName: "Location");
     }
 
-    @NSManaged public var photoData: NSData?
+    @NSManaged public var latitude: Double
+    @NSManaged public var longitude: Double
     @NSManaged public var notes: NSSet?
 
 }
 
 // MARK: Generated accessors for notes
-extension Photo {
+extension Location {
 
     @objc(addNotesObject:)
     @NSManaged public func addToNotes(_ value: Note)

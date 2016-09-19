@@ -1,29 +1,27 @@
 //
-//  Notebook+CoreDataProperties.swift
+//  Photo+CoreDataProperties.swift
 //  Everpobre
 //
-//  Created by Home on 8/9/16.
+//  Created by Home on 19/9/16.
 //  Copyright © 2016 Alicia. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-extension Notebook {
+extension Photo {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Notebook> {
-        return NSFetchRequest<Notebook>(entityName: "Notebook");
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Photo> {
+        return NSFetchRequest<Photo>(entityName: "Photo");
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var creationDate: NSDate?
-    @NSManaged public var modificationDate: NSDate?
+    @NSManaged public var photoData: NSData?
     @NSManaged public var notes: NSSet?
 
 }
 
 // MARK: Generated accessors for notes
-extension Notebook {
+extension Photo {
 
     @objc(addNotesObject:)
     @NSManaged public func addToNotes(_ value: Note)

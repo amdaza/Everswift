@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  Everpobre
 //
-//  Created by Home on 8/9/16.
+//  Created by Home on 19/9/16.
 //  Copyright © 2016 Alicia. All rights reserved.
 //
 
@@ -20,5 +20,6 @@ extension Note {
     @NSManaged public var text: String?
     @NSManaged public var notebook: Notebook?
     @NSManaged public var photo: Photo?
+    @NSManaged public var location: Location?
 
 }
