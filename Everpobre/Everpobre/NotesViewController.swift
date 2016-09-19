@@ -45,4 +45,16 @@ class NotesViewController: CoreDataTableViewController {
         
         return cell!
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Get note
+        let note = fetchedResultsController?.object(at: indexPath) as! Note
+        
+        // Create VC
+        let vc = NoteViewController(model: note)
+        
+        // Show it
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
