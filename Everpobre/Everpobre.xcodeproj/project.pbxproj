@@ -72,6 +72,7 @@
 		1C29C9CC1D88A415004B2C5F /* NoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
 		1C2BAF371D904E8D00F7FD8F /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		1C2BAF381D904E8D00F7FD8F /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		1C2C90431D90783E00EA5AC8 /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
 		1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "../Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "../Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -631,9 +632,10 @@
 		1C29088B1D7F6EA20039260D /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				1C2C90431D90783E00EA5AC8 /* Model2.xcdatamodel */,
 				1C29088C1D7F6EA20039260D /* Model.xcdatamodel */,
 			);
-			currentVersion = 1C29088C1D7F6EA20039260D /* Model.xcdatamodel */;
+			currentVersion = 1C2C90431D90783E00EA5AC8 /* Model2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
