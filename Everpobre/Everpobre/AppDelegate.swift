@@ -38,6 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let strike = Note(notebook: pelis,
                         inContext: model.context)
         strike.text = "The Empire Strikes Back"
+
+        let img = UIImage(imageLiteralResourceName: "Trollface.jpg")
+        
+        let trollface = Note(notebook: wwdc, image: img, inContext: model.context)
+        
+        trollface.text = "Troll Face"
         
         let async = Note(notebook: wwdc,
                          inContext: model.context)

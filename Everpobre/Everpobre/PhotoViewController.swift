@@ -1,27 +1,28 @@
 //
-//  NoteViewController.swift
+//  PhotoViewController.swift
 //  Everpobre
 //
-//  Created by Home on 13/9/16.
+//  Created by Home on 19/9/16.
 //  Copyright © 2016 Alicia. All rights reserved.
 //
 
 import UIKit
 
-class NoteViewController: UIViewController {
+class PhotoViewController: UIViewController {
     
-    // Optional to use it with storyboard
-    var model : Note
+    // Model has to be the note (maybe we use image title in note)
+    let model : Note
 
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var photoView: UIImageView!
     
-    @IBAction func displayPhoto(_ sender: AnyObject) {
+    @IBAction func takePhoto(_ sender: AnyObject) {
         
-        let pVC = PhotoViewController(model: model)
-        navigationController?.pushViewController(pVC, animated: true)
     }
     
-    // No need to be convenience, except if it uses storyboard
+    @IBAction func deletePhoto(_ sender: AnyObject) {
+        
+    }
+    
     init(model: Note) {
         
         self.model = model
@@ -35,7 +36,7 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        edgesForExtendedLayout = .all
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,11 +50,21 @@ class NoteViewController: UIViewController {
     }
     
     func syncModelView(){
-        textView.text = model.text
+        title = model.text
+        photoView.image = model.photo?.image
     }
     
     func syncViewModel(){
-        model.text = textView.text
+        model.photo?.image = photoView.image
     }
+
+    // Managed by CoreData, transforming data into Fault
+    /*
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+ */
+
 
 }

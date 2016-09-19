@@ -20,6 +20,8 @@
 		1C29C9CA1D889A11004B2C5F /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29C9C91D889A11004B2C5F /* NotesViewController.swift */; };
 		1C29C9CD1D88A415004B2C5F /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29C9CB1D88A415004B2C5F /* NoteViewController.swift */; };
 		1C29C9CE1D88A415004B2C5F /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C29C9CC1D88A415004B2C5F /* NoteViewController.xib */; };
+		1C2BAF391D904E8D00F7FD8F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2BAF371D904E8D00F7FD8F /* PhotoViewController.swift */; };
+		1C2BAF3A1D904E8D00F7FD8F /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2BAF381D904E8D00F7FD8F /* PhotoViewController.xib */; };
 		1C3289C31D81E6D100CD17F2 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */; };
 		1C3289C41D81E6D100CD17F2 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */; };
 		1C3289C51D81E6D100CD17F2 /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */; };
@@ -68,6 +70,8 @@
 		1C29C9C91D889A11004B2C5F /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		1C29C9CB1D88A415004B2C5F /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		1C29C9CC1D88A415004B2C5F /* NoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
+		1C2BAF371D904E8D00F7FD8F /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		1C2BAF381D904E8D00F7FD8F /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		1C3289BD1D81E6D100CD17F2 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "../Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1C3289BE1D81E6D100CD17F2 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1C3289BF1D81E6D100CD17F2 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "../Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				1C29C9C91D889A11004B2C5F /* NotesViewController.swift */,
 				1C29C9CB1D88A415004B2C5F /* NoteViewController.swift */,
 				1C29C9CC1D88A415004B2C5F /* NoteViewController.xib */,
+				1C2BAF371D904E8D00F7FD8F /* PhotoViewController.swift */,
+				1C2BAF381D904E8D00F7FD8F /* PhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 			files = (
 				1C3289CD1D81F3A000CD17F2 /* TrollFace.png in Resources */,
 				1C3289D01D8201ED00CD17F2 /* Trollface.jpg in Resources */,
+				1C2BAF3A1D904E8D00F7FD8F /* PhotoViewController.xib in Resources */,
 				1C2908681D7F6E590039260D /* LaunchScreen.storyboard in Resources */,
 				1C2908651D7F6E590039260D /* Assets.xcassets in Resources */,
 				1C29C9CE1D88A415004B2C5F /* NoteViewController.xib in Resources */,
@@ -353,6 +360,7 @@
 				1C3289C81D81E6D100CD17F2 /* Note+CoreDataProperties.swift in Sources */,
 				1C2464231D87342800D5B3C6 /* CoreDataTableViewController.swift in Sources */,
 				1C2464251D87371C00D5B3C6 /* NotebooksViewController.swift in Sources */,
+				1C2BAF391D904E8D00F7FD8F /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

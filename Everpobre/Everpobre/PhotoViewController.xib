@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController" customModule="Everpobre" customModuleProvider="target">
+            <connections>
+                <outlet property="photoView" destination="44z-Q5-PYq" id="2ED-wl-YoI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-Il-c9c">
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44z-Q5-PYq"/>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIs-yL-UXw">
+                            <items>
+                                <barButtonItem systemItem="camera" id="rF8-DF-VIP">
+                                    <connections>
+                                        <action selector="takePhoto:" destination="-1" id="Dl6-1b-2bF"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="qcm-xL-Zlr"/>
+                                <barButtonItem systemItem="trash" id="eTl-Cy-x1F">
+                                    <connections>
+                                        <action selector="deletePhoto:" destination="-1" id="RrG-zG-rXn"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cUX-Il-c9c" secondAttribute="bottom" id="93Q-dx-gLo"/>
+                <constraint firstItem="cUX-Il-c9c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UCH-LS-r9b"/>
+                <constraint firstItem="cUX-Il-c9c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W4w-9C-haX"/>
+                <constraint firstAttribute="trailing" secondItem="cUX-Il-c9c" secondAttribute="trailing" id="mVO-YK-Okk"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
