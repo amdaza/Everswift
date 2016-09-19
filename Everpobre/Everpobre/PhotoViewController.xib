@@ -27,6 +27,12 @@
                                         <action selector="takePhoto:" destination="-1" id="Dl6-1b-2bF"/>
                                     </connections>
                                 </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="bn4-v9-LzU"/>
+                                <barButtonItem title="Filter" id="arl-QH-zjM">
+                                    <connections>
+                                        <action selector="addFilter:" destination="-1" id="8Qy-mf-Gxp"/>
+                                    </connections>
+                                </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="qcm-xL-Zlr"/>
                                 <barButtonItem systemItem="trash" id="eTl-Cy-x1F">
                                     <connections>

@@ -38,6 +38,28 @@ class PhotoViewController: UIViewController {
     
     @IBAction func deletePhoto(_ sender: AnyObject) {
         
+        let oldBounds = self.photoView.bounds
+        
+        // Animación
+        UIView.animate(withDuration: 0.9,
+                       animations: {
+                        self.photoView.alpha = 0
+                        self.photoView.bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
+                        self.photoView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_4))
+                        
+        }) { (finished: Bool) in
+            // Dejar todo como estaba
+            self.photoView.bounds = oldBounds
+            self.photoView.transform = CGAffineTransform(rotationAngle: CGFloat(0))
+            self.photoView.alpha = 1
+            
+            // Actualizamos
+            self.model.photo?.image = nil
+            self.syncModelView()
+        }
+    }
+    
+    @IBAction func addFilter(_ sender: AnyObject) {
     }
     
     init(model: Note) {
@@ -101,9 +123,12 @@ extension PhotoViewController: UIImagePickerControllerDelegate,
         // Save in model
         model.photo?.image = info[UIImagePickerControllerOriginalImage] as! UIImage?
         
-        // Remove picker
+        // Remove picker (remove modal controller)
         self.dismiss(animated: true) {
             // Nothing to do here
         }
+        
+        // If not dismiss, use presenting / presented - viewController
+        // No needed here
     }
 }
